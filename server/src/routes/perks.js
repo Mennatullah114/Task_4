@@ -7,7 +7,7 @@ const router = Router();
 // Public route to get all perks in database (with search and filter)
 router.get('/all', getAllPerksPublic);
 
-// router.get('/', filterPerks);
+ //router.get('/', filterPerks);
 router.get('/',requireAuth, getAllPerks);
 router.get('/:id',requireAuth,getPerk);
 
